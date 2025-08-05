@@ -17,8 +17,8 @@ export const CONTRACT_ADDRESSES: Record<ChainId, ContractAddresses> = {
     // Not supported in MVP
   },
   [ChainId.SONIC_BLAZE_TESTNET]: {
-    market: '0x1b4C769a1E14C9dbB158da0b9E3e5A53826AA9F5',
-    router: '0x91205B2C56bc078B5777Fc96919A6CA4f7BDc3C7',
+    market: '0xe3b11A98E34aA76e3F03F45dF63cce75C7ECcBdf',
+    router: '0x5D22f0B1190268bA6f0da8e2b36523983dd4b1ae',
   },
 }
 
