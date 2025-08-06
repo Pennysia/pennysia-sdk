@@ -170,25 +170,16 @@ const signer = await window.ethereum.request({ method: 'eth_requestAccounts' })
   - Chain ID: `57054`
   - RPC URL: `https://rpc.blaze.soniclabs.com`
   - Explorer: `https://explorer.blaze.soniclabs.com`
-  - **Market Contract**: `0x1b4C769a1E14C9dbB158da0b9E3e5A53826AA9F5`
-  - **Router Contract**: `0x91205B2C56bc078B5777Fc96919A6CA4f7BDc3C7`
-
-## Contract Addresses
-
-### Sonic Blaze Testnet (Chain ID: 57054)
-- **Market Contract**: `0x1b4C769a1E14C9dbB158da0b9E3e5A53826AA9F5`
-- **Router Contract**: `0x91205B2C56bc078B5777Fc96919A6CA4f7BDc3C7`
-- **Explorer Links**:
-  - [Market Contract](https://explorer.blaze.soniclabs.com/address/0x1b4C769a1E14C9dbB158da0b9E3e5A53826AA9F5)
-  - [Router Contract](https://explorer.blaze.soniclabs.com/address/0x91205B2C56bc078B5777Fc96919A6CA4f7BDc3C7)
+  - **Market Contract**: `0x1082c49293D3F2f59BD32f358a3f273E5ee38312`
+  - **Router Contract**: `0xe3b11A98E34aA76e3F03F45dF63cce75C7ECcBdf`
 
 > **Status**: ✅ Deployed and verified on Sonic Blaze Testnet
 
 ```typescript
 export const CONTRACT_ADDRESSES: Record<ChainId, ContractAddresses> = {
   [ChainId.SONIC_BLAZE_TESTNET]: {
-    market: '0x1b4C769a1E14C9dbB158da0b9E3e5A53826AA9F5',
-    router: '0x91205B2C56bc078B5777Fc96919A6CA4f7BDc3C7',
+    market: '0x1082c49293D3F2f59BD32f358a3f273E5ee38312',
+    router: '0xe3b11A98E34aA76e3F03F45dF63cce75C7ECcBdf',
   },
   // ... other chains
 }
