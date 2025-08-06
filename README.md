@@ -169,7 +169,7 @@ const signer = await window.ethereum.request({ method: 'eth_requestAccounts' })
 - **Sonic Blaze Testnet** (ChainId.SONIC_BLAZE_TESTNET) - ✅ **LIVE & DEPLOYED**
   - Chain ID: `57054`
   - RPC URL: `https://rpc.blaze.soniclabs.com`
-  - Explorer: `https://explorer.blaze.soniclabs.com`
+  - Explorer: `https://testnet.sonicscan.org`
   - **Market Contract**: `0x1082c49293D3F2f59BD32f358a3f273E5ee38312`
   - **Router Contract**: `0xe3b11A98E34aA76e3F03F45dF63cce75C7ECcBdf`
 
