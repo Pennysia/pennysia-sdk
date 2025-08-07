@@ -18,7 +18,7 @@ export const CONTRACT_ADDRESSES: Record<ChainId, ContractAddresses> = {
   },
   [ChainId.SONIC_BLAZE_TESTNET]: {
     market: '0xe3b11A98E34aA76e3F03F45dF63cce75C7ECcBdf',
-    router: '0x5D22f0B1190268bA6f0da8e2b36523983dd4b1ae',
+    router: '0x6cAEB59821A29845eddf5ea7b54850eDdD14AF0f',
   },
 }
 
