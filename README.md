@@ -1,5 +1,9 @@
 # Pennysia SDK
 
+[![TypeScript](https://img.shields.io/badge/TypeScript->5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Node](https://img.shields.io/badge/Node-20.x-339933?logo=node.js)](https://nodejs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Minimal TypeScript SDK for interacting with the Pennysia AMM on EVM-compatible chains. It provides a clean interface for quoting prices, swapping, and managing liquidity, plus deterministic on-chain math helpers and utilities for tokens, chains, and formatting.
 
 ### Features
@@ -11,9 +15,39 @@ Minimal TypeScript SDK for interacting with the Pennysia AMM on EVM-compatible c
 
 ## Installation
 
+Choose how you want to consume the SDK. If this package isn’t published to npm, use Git, a local path, or a workspace.
+
+- From npm registry (if/when published under your scope):
+
 ```bash
-npm install pennysia-sdk ethers
+npm install @your-scope/pennysia-sdk ethers
 ```
+
+- Directly from Git (no publish required):
+
+```bash
+npm install github:OWNER/REPO#main ethers
+```
+
+- Local path (consume from a sibling folder):
+
+```bash
+npm install file:../pennysia-sdk ethers
+```
+
+- Monorepo workspace (pnpm/yarn/npm workspaces):
+
+```json
+// package.json (consumer)
+{
+  "dependencies": {
+    "pennysia-sdk": "workspace:*",
+    "ethers": "^6"
+  }
+}
+```
+
+Note: The import path `pennysia-sdk` works as long as this package’s `name` in `package.json` is set accordingly.
 
 ## Quickstart
 
@@ -280,3 +314,8 @@ npm run lint    # eslint
 ## License
 
 MIT © Pennysia
+
+
+---
+
+**Built with ❤️ by the Pennysia Team**
