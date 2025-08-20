@@ -1,5 +1,5 @@
 # Pennysia SDK
-
+[![Lint](https://github.com/Pennysia/pennysia-sdk/actions/workflows/lint.yml/badge.svg)](https://github.com/Pennysia/pennysia-sdk/actions/workflows/lint.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript->5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Node](https://img.shields.io/badge/Node-20.x-339933?logo=node.js)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -26,7 +26,7 @@ npm install @your-scope/pennysia-sdk ethers
 - Directly from Git (no publish required):
 
 ```bash
-npm install github:OWNER/REPO#main ethers
+npm install github:Pennysia/pennysia-sdk#main ethers
 ```
 
 - Local path (consume from a sibling folder):
