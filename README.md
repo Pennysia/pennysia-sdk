@@ -197,6 +197,34 @@ await sdk.removeLiquidity({
   to: await sdk.signer!.getAddress(),
   deadline: PennysiaSDK.createDeadline(20),
 })
+
+// LP position swap (rebalance long/short)
+await sdk.lpSwap({
+  token0: TOKEN_A,
+  token1: TOKEN_B,
+  longToShort0: true,
+  liquidity0: '500000',
+  longToShort1: false,
+  liquidity1: '0',
+  liquidity0OutMinimum: '490000',
+  liquidity1OutMinimum: '0',
+  to: await sdk.signer!.getAddress(),
+  deadline: PennysiaSDK.createDeadline(20),
+})
+
+// Rebalance LP positions (long/short) within a pair
+const { hash } = await sdk.routerContract.liquiditySwap(
+  TOKEN_A.address,
+  TOKEN_B.address,
+  /* longToShort0 */ true,
+  /* liquidity0    */ '500000',
+  /* longToShort1 */ false,
+  /* liquidity1    */ '0',
+  /* minOut0       */ '490000',
+  /* minOut1       */ '0',
+  await sdk.signer!.getAddress(),
+  PennysiaSDK.createDeadline(20)
+)
 ```
 
 ### TTL Approvals

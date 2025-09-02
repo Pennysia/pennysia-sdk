@@ -41,6 +41,19 @@ export interface RemoveLiquidityParams {
   deadline: number
 }
 
+export interface LpSwapParams {
+  token0: Token
+  token1: Token
+  longToShort0: boolean
+  liquidity0: string
+  longToShort1: boolean
+  liquidity1: string
+  liquidity0OutMinimum: string
+  liquidity1OutMinimum: string
+  to: string
+  deadline: number
+}
+
 export class PennysiaSDK {
   public readonly chainId: ChainId
   public readonly provider: Provider
@@ -103,7 +116,8 @@ export class PennysiaSDK {
     reserve1Long: string
     reserve1Short: string
   }> {
-    const reserves = await this.marketContract.getReserves(token0.address, token1.address)
+    const pairId = await this.marketContract.getPairId(token0.address, token1.address)
+    const reserves = await this.marketContract.getReserves(pairId)
     return {
       reserve0Long: reserves.reserve0Long.toString(),
       reserve0Short: reserves.reserve0Short.toString(),
@@ -231,6 +245,25 @@ export class PennysiaSDK {
       params.shortY,
       params.amount0Minimum,
       params.amount1Minimum,
+      params.to,
+      params.deadline
+    )
+  }
+
+  async lpSwap(params: LpSwapParams): Promise<ethers.ContractTransactionResponse> {
+    if (!this.signer) {
+      throw new Error('Signer required for liquidity operations')
+    }
+
+    return await this.routerContract.liquiditySwap(
+      params.token0.address,
+      params.token1.address,
+      params.longToShort0,
+      params.liquidity0,
+      params.longToShort1,
+      params.liquidity1,
+      params.liquidity0OutMinimum,
+      params.liquidity1OutMinimum,
       params.to,
       params.deadline
     )
